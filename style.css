@@ -1,0 +1,208 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    text-decoration: none;
+    font-family: 'Segoe UI';
+}
+/*Navbar*/
+nav{
+    background-color: #24292E;
+    height: 62px;
+    width: 100%;
+    line-height: 60px;
+    display: flex;
+    justify-content: space-between;
+}
+.logo{
+    margin: 0 0 0 30px;
+}
+
+.logo img{
+    margin-top: 12px;
+}
+.sec1 i{
+    margin-top: 22px;
+    color: white;
+    font-size: 18px;
+    display: none;
+}
+.sec1{
+    display: flex;
+}
+.inpFd{
+    width: 250px; 
+    
+}
+.sec1 input{
+    border:1px solid #444d56;
+    border-radius: 5px;
+    outline: none;
+    width: 100%; 
+    height: 28px;
+    background-color: #24292E;
+    padding: 0 12px;
+    margin-left: 15px;
+}
+.inpFd ::placeholder{
+    color: lightgray;
+    
+}
+.sec1 ul{
+   
+    width: 400px;
+    margin-left: 50px; 
+}
+.sec1 li{
+    display: inline;
+}
+.sec1 a{
+    font-size: 14px;
+    
+    font-weight: 600;
+    color: rgba(255, 255, 255);
+    margin-left: 9px;
+    line-height: 65px;
+}
+nav .sec2{
+    padding: 0 30px 0 0;
+}
+.sec2 i{
+    margin-left: 20px;
+    color: white;
+    font-weight: 1;
+}
+svg{
+    color: white;
+}
+.nav2{
+    display: none;
+}
+/* Sub-nav */
+
+
+main{
+    display: grid;
+    grid-template-columns: 27% auto;
+    grid-gap: 5px;
+    padding: 0 50px;
+}
+main section{
+    padding: 0px;
+}
+main section:first-child{
+    padding: 0rem 2rem  ;
+}
+.sub-nav{
+    border: 1px solid #E1E4E8;
+    height: 55px;
+    margin-bottom: 1rem;
+    position: sticky;
+    top: 0;
+}
+.sub-nav li{
+    display: inline;
+} 
+.sub-nav ul{
+    margin-left: 35%;
+}
+.sub-nav a{
+    font-size: 14px;
+    font-family: 'Segoe UI';
+    font-weight: 600;
+    color: rgba(0, 0, 0);
+    margin-right: 35px;
+    line-height: 63px;
+}
+.repo-list input{
+    width: 99%;
+    height: 35px;
+    border:1px solid #E1E4E8;
+    border-radius: 5px;
+    padding: 0 0 0 10px;
+}
+.find-repo{
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #E1E4E8;
+}
+.repository h2{
+    font-weight: 600;
+    color: #0366d6;
+    margin-bottom: 0.4rem;
+}
+
+.repository .sect1 div{
+    margin-top: .5rem;
+}
+.repository .shift{
+    display: inline-block;
+    margin-right: 5px;
+}
+.repository button{
+    padding: .2rem 1.1rem;
+    border-radius: 3px;
+    border: .5px solid lightgray;
+    font-weight: 600;
+    cursor: pointer;
+}
+.repository button span{
+    color: #6a737d;
+    font-weight: 600;
+}.repository .repo-card{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #E1E4E8;
+    padding: 1.5rem 0 2rem 0 ;
+    margin-top: 1rem;
+   
+}
+
+
+
+
+@media all and (max-width:869px){
+    nav{
+        display: none;
+    }
+    .nav2{
+        background-color: #24292E;
+        height: 62px;
+        width: 97%;
+        padding: 0 13px;
+        line-height: 60px;
+        display: flex;
+        justify-content: space-between;
+    }
+ 
+    .nav2 i{
+        display: inline-block;
+        color: white;
+    }
+    .sub-nav{}
+    /* main-content */
+    main{
+        display: block;
+        padding: 0 1rem;
+    }
+    main section{
+        justify-content: none;
+    }
+    main section img{
+         width: 100% !important; 
+    }
+    main .profile-description .image{
+        width: 20%;
+    } 
+
+    main section:first-child{
+        background-color: lightgray;
+        margin-bottom: 1.5rem;
+        padding-left: 0 !important; 
+        display: flex;
+    }
+    main:first-child{
+        padding: 30px;
+    }
+    
+}
