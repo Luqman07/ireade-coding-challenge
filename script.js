@@ -1,18 +1,34 @@
-// import { request, gql } from 'graphql-request'
+const baseUrl = "https://api.github.com/graphql"
+const token = "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"
 
-// const query = gql`
-//   {
-//     Movie(title: "Inception") {
-//       releaseDate
-//       actors {
-//         name
-//       }
-//     }
-//   }
-// `
 
-// request('https://api.graph.cool/simple/v1/movies', query).then((data) => console.log(data))
 
-// fetch('https://docs.github.com/en/graphql/overview/explorer/')
-//   .then(response => response.json())
-//   .then(data => console.log(data))
+fetch( baseUrl, {
+    method:"POST",
+    headers: { "Content-Type":"application/json"},
+    Authentication: "bearer " + token,
+    body: JSON.stringify({
+        query:`
+        {
+            user(login: "Luqman07") {
+              avatarUrl
+              bio
+              name
+              id
+              repositories(first: 20) {
+                edges {
+                  node {
+                    id
+                  }
+                }
+              }
+            }
+          }
+              
+        `
+    })
+})
+.then(res => res.json)
+.then(data => {
+    console.log(data.data);   
+})

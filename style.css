@@ -87,6 +87,8 @@ svg{
     position: -webkit-sticky;
     position: sticky;
     top: 0;
+    background-color: #fff;
+    z-index: 0;
 }
 .sub-nav li{
     display: inline;
@@ -94,6 +96,7 @@ svg{
 .sub-nav ul{
     padding-left: 30%;
     display: block;
+    width: 100%;
 }
 .sub-nav a{
     font-size: 14px;
@@ -103,18 +106,40 @@ svg{
     margin-right: 1rem;
     line-height: 63px;
 }
+.active span:nth-child(2){
+    width: 1500px;
+    height: 50px;
+    background-color: blanchedalmond;
+    border-radius: 50px;
+}
+.active{
+    padding: 0 2rem .77rem 2rem;
+    border-bottom: .18rem solid #f9826c;
+}
 /* page-content */
 main{
     display: grid;
     grid-template-columns: 27% auto;
     padding: 0 3rem;
     height: 300vh;
+    z-index: -10;
 }
 
 main section:first-child{
     margin-top: -3rem;
     padding: 0 2rem 0 0rem ;
-    z-index: 2;
+    /* z-index: 100; */
+}
+main .image{
+    z-index: 500;
+    position: relative;
+
+}
+main .image img{
+    width:100%; 
+    border-radius: 50%;
+    z-index: 1000;
+    background-color: blanchedalmond;
 }
 
 .repo-list input{
@@ -185,9 +210,14 @@ main section:first-child{
     line-height: 63px;
 }
 
+@media screen and(max-width:400px){
+    .sub-nav2 ul{
+        padding-left: 0.5rem !important;
+        overflow: scroll;
+    }
+}
 
-
-@media all and (max-width:869px){
+@media screen and (max-width:869px){
     nav{
         display: none;
     }
@@ -210,15 +240,22 @@ main section:first-child{
         display: none;
     }
     .sub-nav2{
+        width: 100%;
         background-color: #fff;
         display: block;
         position: -webkit-sticky;
         position: sticky;
         top: 0;
-        border-bottom: .1px solid black;
+        border-bottom: .1px solid  #E1E4E8;
+        margin: 0 0px 0 -17px;
+        padding-right: 35px;
+
         /* padding-top: 10rem; */
     } 
     .sub-nav2 ul{
+        display: flex;
+        flex-wrap: nowrap;
+        width: 100%;
         padding-left: 2rem;
     }
     /* main-content */
@@ -266,3 +303,4 @@ main section:first-child{
         
     }
 }
+
