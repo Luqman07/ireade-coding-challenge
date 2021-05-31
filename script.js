@@ -1,11 +1,9 @@
-
-const inputField = document.getElementById('input-field')
-const btn = document.querySelector('#btn')
+let user = ''
+if (localStorage.getItem('username')) {
+  user = JSON.parse(localStorage.getItem('username'));
+}
 const getData = async () => {
-  let user = inputField.value
-  console.log(user);
-  
-  location.href = 'index.html'
+
   console.log(user);
   const data = JSON.stringify({
     query: `{
@@ -113,4 +111,4 @@ const getData = async () => {
 
 };
 
-btn.addEventListener('click', getData)
+getData()

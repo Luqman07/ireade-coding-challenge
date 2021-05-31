@@ -64,18 +64,27 @@
 
         <div class="inputfield">
             <div>
-               
+
                 <input placeholder="Username" type="text" name="" id="input-field">
                 <button id="btn" class="btn">Login</button>
             </div>
             <div>
-               
+
             </div>
         </div>
 
     </div>
 
-    <script src="script.js"></script>
+    <script>
+
+        let inpField = document.getElementById('input-field')
+        let btn = document.getElementById('btn')
+
+        btn.addEventListener('click', () => {
+            localStorage.setItem('username', JSON.stringify(inpField.value))
+            location.href = 'index.html'
+        })
+    </script>
 </body>
 
 </html>
