@@ -5,8 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Coding challenge</title>
-    <script src="https://use.fontawesome.com/d8d3f258a4.js"></script>
-    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -35,22 +34,22 @@
                 </div>
                 <div class="sec2">
                     <i class="fa fa-bell-o"></i>
-                    <i class="fa fa-bell-o"></i>
-                    <i class="fa fa-bell-o"></i>
+                    <span style="color: white;font-size: 25px; margin-left: .5rem;">&plus;</span> <span style="color: white;" class="fa fa-caret-down"></span>
+                    <span style="padding: 1px 10px; background-color: lightgray;margin-left: .5rem; border-radius: 50%;"class=""></span><span style="color: white;margin-left: 4px;" class="fa fa-caret-down"></span>
                 </div>
             </nav>
 
             <!-- mobile view nav -->
             <div class="nav2">
                 <div class="bars">
-                    <i class="fa fa-bars"></i>
+                    <i style="color: white;" class="fa fa-bars"></i>
                 </div>
                 <div class="logo">
                     <img src="Images/GitH.png" alt="">
                 </div>
                 <div class="sec2">
                     <i class="fa fa-bell-o"></i>
-                   
+
                 </div>
             </div>
 
@@ -60,34 +59,35 @@
         <div class="sub-nav">
             <ul>
                 <li><a href=""> <span></span> Overview</a></li>
-                <li><a class="active" href=""> <span></span> Repositories <span class="num">6</span> </a></li>
+                <li><a class="active" href=""> <span></span> Repositories <span class="num"></span> </a></li>
                 <li><a href=""> <span></span> Project</a></li>
                 <li><a href=""> <span></span> Packages</a></li>
             </ul>
         </div>
         <hr>
-        
+
         <main>
             <section class="profile-description">
                 <div class="image">
-                    <img src="Images\Github.png" alt="">
+                    <img id="avatar" src="Images\Github.png" alt="">
                 </div>
                 <div class="profile-details">
                     <div class="d1">
-                        <h2 class="hide">Ire Aderinokun</h2>
-                        <p>ireade</p>
+                        <h2 id="fullname">Ire Aderinokun</h2>
+                        <p id="username">ireade</p>
                     </div>
                     <br>
                     <div class="d2 hide">
-                        <p style="width: 80%; display: inline-block;">Frontend Developer and User Interface Designer</p>
+                        <p id="bio" style="width: 80%; display: inline-block;">Frontend Developer and User Interface
+                            Designer</p>
                     </div>
                 </div>
-                
+
             </section>
             <div class="sub-nav2">
                 <ul>
                     <li><a href=""> <span></span> Overview</a></li>
-                    <li><a class="active" href=""> <span></span> Repositories <span></span> </a></li>
+                    <li><a class="active" href=""> <span></span> Repositories <span class="num1"></span> </a></li>
                     <li><a href=""> <span></span> Project</a></li>
                     <li><a href=""> <span></span> Packages</a></li>
                 </ul>
@@ -97,50 +97,10 @@
                 <div class="find-repo">
                     <input placeholder="Find a repository..." type="text" name="" id="">
                 </div>
-                
-                <div class="repository">
-                    <div class="repo-card">
-                        <div class="sect1">
-                            <h2>Radiant Minds</h2>
-                            <small>project</small>
-                            <div>
-                                <div class="shift language">
-                                    <span style="font-size: 0.7rem;" class="fa fa-bars"></span>
-                                    <small>HTML</small>
-                                </div>
-                                <div class="shift">
-                                    <span></span>
-                                    <small>1</small>
-                                </div>
-                                <small>Updated 13 days ago</small>
-                            </div>
-                        </div>
-                        <div class="sect2">
-                            <button> <span class="fa fa-star-o"></span> Star</button>
-                        </div>
-                        
-                    </div>
-                    <div class="repo-card">
-                        <div class="sect1">
-                            <h2>Radiant Minds</h2>
-                            <small>project</small>
-                            <div>
-                                <div class="shift language">
-                                    <span style="font-size: 0.7rem;" class="fa fa-bars"></span>
-                                    <small>HTML</small>
-                                </div>
-                                <div class="shift">
-                                    <span></span>
-                                    <small>1</small>
-                                </div>
-                                <small>Updated 13 days ago</small>
-                            </div>
-                        </div>
-                        <div class="sect2">
-                            <button> <span class="fa fa-star-o"></span> Star</button>
-                        </div>
-                        
-                    </div>
+
+                <div id="repository" class="repository">
+
+
                 </div>
             </section>
         </main>
